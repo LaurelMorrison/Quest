@@ -68,7 +68,13 @@ namespace Quest
                     PlayersRobe.Length = 12;
                     PlayersRobe.Colors = new List<string> { "red", "blue", "green" };
                 }
-                Adventurer theAdventurer = new Adventurer(name, PlayersRobe);
+
+                Hat PlayersHat = new Hat();
+                {
+                    PlayersHat.ShininessLevel = 5;
+                }
+
+                Adventurer theAdventurer = new Adventurer(name, PlayersRobe, PlayersHat);
 
                 Console.WriteLine(theAdventurer.GetDescription());
 
