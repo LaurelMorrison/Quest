@@ -1,0 +1,16 @@
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\Quest.exe
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\Quest.deps.json
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\Quest.runtimeconfig.json
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\Quest.runtimeconfig.dev.json
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\Quest.dll
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\ref\Quest.dll
+C:\Users\Laurel\workspace\Quest\bin\Debug\net5.0\Quest.pdb
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.csprojAssemblyReference.cache
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.AssemblyInfoInputs.cache
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.AssemblyInfo.cs
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.csproj.CoreCompileInputs.cache
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.dll
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\ref\Quest.dll
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.pdb
+C:\Users\Laurel\workspace\Quest\obj\Debug\net5.0\Quest.genruntimeconfig.cache
