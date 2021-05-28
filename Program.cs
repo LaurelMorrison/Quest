@@ -50,6 +50,19 @@ namespace Quest
                             ",
                     4, 20
                 );
+                Challenge bestPizza = new Challenge(
+                    @"Whats the best pizza topping?
+                        1) Sausage
+                        2) Pepper
+                        3) Pineapple
+                        4) More Cheese
+                            ",
+                    3, 10
+                );
+                Challenge dogAge = new Challenge(
+                     @"How old is my dog?",
+                     2, 20
+                );
 
 
                 // "Awesomeness" is like our Adventurer's current "score"
@@ -74,6 +87,8 @@ namespace Quest
                     PlayersHat.ShininessLevel = 5;
                 }
 
+                Prize ThePrize = new Prize("a participation trophy!");
+
                 Adventurer theAdventurer = new Adventurer(name, PlayersRobe, PlayersHat);
 
                 Console.WriteLine(theAdventurer.GetDescription());
@@ -87,17 +102,33 @@ namespace Quest
                 theAnswer,
                 whatSecond,
                 guessRandom,
-                favoriteBeatle
+                favoriteBeatle,
+                bestPizza,
+                dogAge
             };
 
                 // Loop through all the challenges and subject the Adventurer to them
-                foreach (Challenge challenge in challenges)
+                Random r = new Random();
+                List<int> indexes = new List<int>();
+
+
+                while (indexes.Count < 4)
                 {
-                    challenge.RunChallenge(theAdventurer);
+                    int question = r.Next(challenges.Count - 1);
+                    if (!indexes.Contains(question))
+                    {
+                        indexes.Add(question);
+                    }
+                }
+                for (int i = 0; i < indexes.Count; i++)
+                {
+                    int index = indexes[i];
+                    challenges[index].RunChallenge(theAdventurer);
+                    // Console.WriteLine(challenges[index]);
                 }
 
                 // This code examines how Awesome the Adventurer is after completing the challenges
-                // And praises or humiliates them accordingly
+                //             And praises or humiliates them accordingly
                 if (theAdventurer.Awesomeness >= maxAwesomeness)
                 {
                     Console.WriteLine("YOU DID IT! You are truly awesome!");
@@ -109,6 +140,16 @@ namespace Quest
                 else
                 {
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
+                }
+
+
+                bool showWinnings = true;
+                while (showWinnings)
+                {
+                    Console.Write("You have won... ");
+                    ThePrize.ShowPrize(theAdventurer);
+                    showWinnings = false;
+                    Console.WriteLine(" ");
                 }
             }
 
@@ -129,7 +170,7 @@ namespace Quest
                 {
                     Console.WriteLine("Round 2");
                     PlayGame();
-                    repeatQuestion = false;
+                    repeatQuestion = true;
                 }
                 else if (response == no)
                 {
