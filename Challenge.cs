@@ -37,6 +37,7 @@ namespace Quest
             if (isNumber && numAnswer == _correctAnswer)
             {
                 Console.WriteLine("Well Done!");
+                adventurer.FinalScore++;
 
                 // Note how we access an Adventurer object's property
                 adventurer.Awesomeness += _awesomenessChange;
@@ -45,6 +46,7 @@ namespace Quest
             {
                 Console.WriteLine("You have failed the challenge, there will be consequences.");
                 adventurer.Awesomeness -= _awesomenessChange;
+
             }
 
             // Note how we call an Adventurer object's method

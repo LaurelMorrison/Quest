@@ -86,10 +86,13 @@ namespace Quest
                 {
                     PlayersHat.ShininessLevel = 5;
                 }
+                int FinalScore = new int();
+
 
                 Prize ThePrize = new Prize("a participation trophy!");
 
-                Adventurer theAdventurer = new Adventurer(name, PlayersRobe, PlayersHat);
+                Adventurer theAdventurer = new Adventurer(name, PlayersRobe, PlayersHat, FinalScore);
+
 
                 Console.WriteLine(theAdventurer.GetDescription());
 
@@ -106,6 +109,7 @@ namespace Quest
                 bestPizza,
                 dogAge
             };
+
 
                 // Loop through all the challenges and subject the Adventurer to them
                 Random r = new Random();
@@ -124,7 +128,6 @@ namespace Quest
                 {
                     int index = indexes[i];
                     challenges[index].RunChallenge(theAdventurer);
-                    // Console.WriteLine(challenges[index]);
                 }
 
                 // This code examines how Awesome the Adventurer is after completing the challenges
@@ -148,6 +151,9 @@ namespace Quest
                 {
                     Console.Write("You have won... ");
                     ThePrize.ShowPrize(theAdventurer);
+                    int Score = theAdventurer.Awesomeness + (theAdventurer.FinalScore * 10);
+                    Console.WriteLine("");
+                    Console.WriteLine($"Current score: {Score} points.");
                     showWinnings = false;
                     Console.WriteLine(" ");
                 }

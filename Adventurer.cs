@@ -1,4 +1,5 @@
 
+
 namespace Quest
 {
     // An instance of the Adventurer class is an object that will undergo some challenges
@@ -16,13 +17,17 @@ namespace Quest
         //  So it can be read and changed by any code in the application
         public int Awesomeness { get; set; }
 
+        public int FinalScore { get; set; }
+
         // A constructor to make a new Adventurer object with a given name
-        public Adventurer(string name, Robe PlayersRobe, Hat PlayersHat)
+        public Adventurer(string name, Robe PlayersRobe, Hat PlayersHat, int FinalScore)
         {
             Name = name;
             Awesomeness = 50;
             ColorfulRobe = PlayersRobe;
             Hat = PlayersHat;
+            FinalScore = 0;
+
         }
         //Adding description of player's robe
         public string GetDescription()
